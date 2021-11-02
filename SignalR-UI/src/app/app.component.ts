@@ -11,6 +11,7 @@ import {SignalRService} from './signal-r.service';
 export class AppComponent implements OnInit {
 
   informationMessage = 'Waiting...🤨';
+  userMessage = 'User...';
 
   constructor(private signalRService: SignalRService) {
 
@@ -21,5 +22,7 @@ export class AppComponent implements OnInit {
       console.log(message);
       this.informationMessage = message;
     });
+
+    this.userMessage = this.signalRService.userName;
   }
 }
