@@ -23,6 +23,6 @@ export class AppComponent implements OnInit {
       this.informationMessage = message;
     });
 
-    this.userMessage = this.signalRService.userName;
+    this.userMessage = this.signalRService.loggedInUser;
   }
 }
